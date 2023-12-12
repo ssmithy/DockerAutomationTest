@@ -15,13 +15,13 @@ jobs:
         with:
           tag_name: ${{ github.run_number }}
           release_name: Release No:${{ github.run_number }}
-      - name: Upload release asset
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./site.zip
-          asset_name: site-v${{ github.run_number }}
-          asset_content_type: application/text
+      # - name: Upload release asset
+      #   uses: actions/upload-release-asset@v1
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   with:
+      #     upload_url: ${{ steps.create_release.outputs.upload_url }}
+      #     asset_path: ./site.zip
+      #     asset_name: site-v${{ github.run_number }}
+      #     asset_content_type: application/text
           
